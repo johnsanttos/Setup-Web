@@ -1,6 +1,7 @@
 //import './styles/global.css'
 import { Habit } from './components/Habit'
 import { Header } from './components/Hearder';
+import SummaryTable from './components/SummaryTable';
 import './index.css';
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
   <div className='w-full max-w-5xl px-6 flex flex-col gap-16 '>
     
     <Header/>
+
+    <SummaryTable/>
  
   </div>
 </div>
