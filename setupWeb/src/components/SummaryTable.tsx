@@ -18,7 +18,7 @@ export default function SummaryTable() {
 
     const amountOfDaysToFill = minimumSummaryDatesSize - summaryDates.length
 
-    console.log('la eleeee , ', summaryDates)
+    //console.log('la eleeee , ', summaryDates)
     return (
         <div className="w-full flex ">
             <div className=" grid grid-rows-7 grid-flow-row gap-3">

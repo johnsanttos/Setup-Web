@@ -22,7 +22,6 @@ export function HabitDay({ completed, amount }: HabitDayProps) {
                         'bg-violet-800 border-violet-600': completedPercentage >= 20 && completedPercentage < 40,
                         'bg-violet-700 border-violet-500': completedPercentage >= 40 && completedPercentage < 60,
                         'bg-violet-600 border-violet-500': completedPercentage >= 60 && completedPercentage < 80,
-
                         'bg-violet-500 border-violet-400': completedPercentage >= 80,
                     })} />
 
@@ -59,7 +58,7 @@ export function HabitDay({ completed, amount }: HabitDayProps) {
                             </div>
 
                             <span className='font-semibold text-xl text-white leading-tight  group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
-                                Sair com 2050 homens diferentes
+                                Sair com 2050 pessoas diferentes
                             </span>
                         </Checkbox.Root>
                         <Checkbox.Root className='flex items-center gap-3 group'>
@@ -71,7 +70,7 @@ export function HabitDay({ completed, amount }: HabitDayProps) {
                             </div>
 
                             <span className='font-semibold text-xl text-white leading-tight  group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
-                                Sair de mini-saia sem calcinha
+                                Jogar games por 2 horas
                             </span>
                         </Checkbox.Root>
 
