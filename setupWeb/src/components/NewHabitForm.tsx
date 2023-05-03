@@ -16,9 +16,17 @@ export default function NewHabitForm() {
     const [title, setTitle] = useState('')
     const [weekDays, setWeekDays] = useState<number[]>([])
 
+    
+
     function createNewHabit(event: FormEvent) {
         event.preventDefault()
-        console.log('olha isssooooooo',title, weekDays)
+        //console.log('olha isssooooooo',title, weekDays)
+        if( !title ||  weekDays.length === 0){
+            return
+        }
+
+        
+
     }
 
     function handleToggleWeekDay(weekDay: number) {
@@ -55,15 +63,18 @@ export default function NewHabitForm() {
             <div className="flex flex-col gap-2 mt-3">
 
                 {
-                    availableWeekDaysDays.map((weekDay, i) => {
+                    availableWeekDaysDays.map((weekDay, index) => {
                         return (
                             <Checkbox.Root
-                                onCheckedChange={() => {
-                                    handleToggleWeekDay(i)
-                                }}
+                              
                                 
-                                key={`${weekDay}-${i}`}
-                                className='flex items-center gap-3 group'>
+                                key={weekDay}
+                                className='flex items-center gap-3 group'
+                                onCheckedChange ={()=>{
+                                    handleToggleWeekDay(index)
+                                    console.log('selecionou o dia ' , index)
+                                }}
+                                >
 
                                 <div className='h-8 w-8 rounded-xl flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500'>
                                     <Checkbox.Indicator>
